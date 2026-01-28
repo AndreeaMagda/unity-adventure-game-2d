@@ -1,7 +1,12 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
+
 
 public class PlayerController : MonoBehaviour
 {
+
+    public float speed=0.1f;
+   
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -12,7 +17,9 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         Vector2 position=transform.position;
-        position.x=position.x+0.1f;
+        position.x=position.x+speed;
+       
+        
         transform.position=position;
     }
 }
